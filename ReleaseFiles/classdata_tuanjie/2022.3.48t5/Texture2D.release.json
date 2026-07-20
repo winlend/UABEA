@@ -1,0 +1,648 @@
+{
+  "typeId": 28,
+  "size": 768,
+  "namespace": "",
+  "module": "Core",
+  "nodes": [
+    {
+      "level": 0,
+      "type": "Texture2D",
+      "name": "Base",
+      "byteSize": -1,
+      "index": 0,
+      "version": 4,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "string",
+      "name": "m_Name",
+      "byteSize": -1,
+      "index": 1,
+      "version": 1,
+      "metaFlag": 557057,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 2,
+      "version": 1,
+      "metaFlag": 540673,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 3,
+      "version": 1,
+      "metaFlag": 524289,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 4,
+      "version": 1,
+      "metaFlag": 524289,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_ForcedFallbackFormat",
+      "byteSize": 4,
+      "index": 5,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_DownscaleFallback",
+      "byteSize": 1,
+      "index": 6,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_IsAlphaChannelOptional",
+      "byteSize": 1,
+      "index": 7,
+      "version": 1,
+      "metaFlag": 16384,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_Width",
+      "byteSize": 4,
+      "index": 8,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_Height",
+      "byteSize": 4,
+      "index": 9,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "unsigned int",
+      "name": "m_CompleteImageSize",
+      "byteSize": 4,
+      "index": 10,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_MipsStripped",
+      "byteSize": 4,
+      "index": 11,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_WebStreaming",
+      "byteSize": 1,
+      "index": 12,
+      "version": 1,
+      "metaFlag": 16384,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_PriorityLevel",
+      "byteSize": 4,
+      "index": 13,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_UploadedMode",
+      "byteSize": 4,
+      "index": 14,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "DataStreamingInfo",
+      "name": "m_DataStreamData",
+      "byteSize": -1,
+      "index": 15,
+      "version": 1,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 16,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "string",
+      "name": "path",
+      "byteSize": -1,
+      "index": 17,
+      "version": 1,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 18,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 19,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 20,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_TextureFormat",
+      "byteSize": 4,
+      "index": 21,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_MipCount",
+      "byteSize": 4,
+      "index": 22,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_IsReadable",
+      "byteSize": 1,
+      "index": 23,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_IsPreProcessed",
+      "byteSize": 1,
+      "index": 24,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_IgnoreMipmapLimit",
+      "byteSize": 1,
+      "index": 25,
+      "version": 1,
+      "metaFlag": 16384,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "string",
+      "name": "m_MipmapLimitGroupName",
+      "byteSize": -1,
+      "index": 26,
+      "version": 1,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 27,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 28,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 29,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_StreamingMipmaps",
+      "byteSize": 1,
+      "index": 30,
+      "version": 1,
+      "metaFlag": 16384,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_StreamingMipmapsPriority",
+      "byteSize": 4,
+      "index": 31,
+      "version": 1,
+      "metaFlag": 16384,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_ImageCount",
+      "byteSize": 4,
+      "index": 32,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_TextureDimension",
+      "byteSize": 4,
+      "index": 33,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "GLTextureSettings",
+      "name": "m_TextureSettings",
+      "byteSize": 24,
+      "index": 34,
+      "version": 2,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_FilterMode",
+      "byteSize": 4,
+      "index": 35,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_Aniso",
+      "byteSize": 4,
+      "index": 36,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "float",
+      "name": "m_MipBias",
+      "byteSize": 4,
+      "index": 37,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_WrapU",
+      "byteSize": 4,
+      "index": 38,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_WrapV",
+      "byteSize": 4,
+      "index": 39,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_WrapW",
+      "byteSize": 4,
+      "index": 40,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_LightmapFormat",
+      "byteSize": 4,
+      "index": 41,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_ColorSpace",
+      "byteSize": 4,
+      "index": 42,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "m_PlatformBlob",
+      "byteSize": -1,
+      "index": 43,
+      "version": 1,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 44,
+      "version": 1,
+      "metaFlag": 16384,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 45,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 46,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "TypelessData",
+      "name": "image data",
+      "byteSize": -1,
+      "index": 47,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 48,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 49,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "StreamingInfo",
+      "name": "m_StreamData",
+      "byteSize": -1,
+      "index": 50,
+      "version": 2,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "UInt64",
+      "name": "offset",
+      "byteSize": 8,
+      "index": 51,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 52,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "string",
+      "name": "path",
+      "byteSize": -1,
+      "index": 53,
+      "version": 1,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 54,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 55,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 56,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_OriginalWidth",
+      "byteSize": 4,
+      "index": 57,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_OriginalHeight",
+      "byteSize": 4,
+      "index": 58,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "GUID",
+      "name": "m_OriginalAssetGuid",
+      "byteSize": 16,
+      "index": 59,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "data[0]",
+      "byteSize": 4,
+      "index": 60,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "data[1]",
+      "byteSize": 4,
+      "index": 61,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "data[2]",
+      "byteSize": 4,
+      "index": 62,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "data[3]",
+      "byteSize": 4,
+      "index": 63,
+      "version": 1,
+      "metaFlag": 16,
+      "flags": 0
+    }
+  ]
+}

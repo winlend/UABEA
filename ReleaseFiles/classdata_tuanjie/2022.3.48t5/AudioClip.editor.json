@@ -1,0 +1,428 @@
+{
+  "typeId": 83,
+  "size": 600,
+  "namespace": "",
+  "module": "Audio",
+  "nodes": [
+    {
+      "level": 0,
+      "type": "AudioClip",
+      "name": "Base",
+      "byteSize": -1,
+      "index": 0,
+      "version": 1,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "unsigned int",
+      "name": "m_ObjectHideFlags",
+      "byteSize": 4,
+      "index": 1,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "PPtr<EditorExtension>",
+      "name": "m_CorrespondingSourceObject",
+      "byteSize": 12,
+      "index": 2,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_FileID",
+      "byteSize": 4,
+      "index": 3,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "SInt64",
+      "name": "m_PathID",
+      "byteSize": 8,
+      "index": 4,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "PPtr<PrefabInstance>",
+      "name": "m_PrefabInstance",
+      "byteSize": 12,
+      "index": 5,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_FileID",
+      "byteSize": 4,
+      "index": 6,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "SInt64",
+      "name": "m_PathID",
+      "byteSize": 8,
+      "index": 7,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "PPtr<Prefab>",
+      "name": "m_PrefabAsset",
+      "byteSize": 12,
+      "index": 8,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_FileID",
+      "byteSize": 4,
+      "index": 9,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "SInt64",
+      "name": "m_PathID",
+      "byteSize": 8,
+      "index": 10,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "string",
+      "name": "m_Name",
+      "byteSize": -1,
+      "index": 11,
+      "version": 1,
+      "metaFlag": 557057,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 12,
+      "version": 1,
+      "metaFlag": 540673,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 13,
+      "version": 1,
+      "metaFlag": 524289,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 14,
+      "version": 1,
+      "metaFlag": 524289,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_LoadType",
+      "byteSize": 4,
+      "index": 15,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_Channels",
+      "byteSize": 4,
+      "index": 16,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_Frequency",
+      "byteSize": 4,
+      "index": 17,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_BitsPerSample",
+      "byteSize": 4,
+      "index": 18,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "float",
+      "name": "m_Length",
+      "byteSize": 4,
+      "index": 19,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_IsTrackerFormat",
+      "byteSize": 1,
+      "index": 20,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_Ambisonic",
+      "byteSize": 1,
+      "index": 21,
+      "version": 1,
+      "metaFlag": 16384,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_SubsoundIndex",
+      "byteSize": 4,
+      "index": 22,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_PreloadAudioData",
+      "byteSize": 1,
+      "index": 23,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_LoadInBackground",
+      "byteSize": 1,
+      "index": 24,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_Legacy3D",
+      "byteSize": 1,
+      "index": 25,
+      "version": 1,
+      "metaFlag": 16384,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "StreamedResource",
+      "name": "m_Resource",
+      "byteSize": -1,
+      "index": 26,
+      "version": 1,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "string",
+      "name": "m_Source",
+      "byteSize": -1,
+      "index": 27,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 28,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 29,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 30,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "FileSize",
+      "name": "m_Offset",
+      "byteSize": 8,
+      "index": 31,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "UInt64",
+      "name": "m_Size",
+      "byteSize": 8,
+      "index": 32,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_CompressionFormat",
+      "byteSize": 4,
+      "index": 33,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "StreamedResource",
+      "name": "m_EditorResource",
+      "byteSize": -1,
+      "index": 34,
+      "version": 1,
+      "metaFlag": 8421376,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "string",
+      "name": "m_Source",
+      "byteSize": -1,
+      "index": 35,
+      "version": 1,
+      "metaFlag": 8421377,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 36,
+      "version": 1,
+      "metaFlag": 8404993,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 37,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 38,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "FileSize",
+      "name": "m_Offset",
+      "byteSize": 8,
+      "index": 39,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "UInt64",
+      "name": "m_Size",
+      "byteSize": 8,
+      "index": 40,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_EditorCompressionFormat",
+      "byteSize": 4,
+      "index": 41,
+      "version": 1,
+      "metaFlag": 8404992,
+      "flags": 0
+    }
+  ]
+}

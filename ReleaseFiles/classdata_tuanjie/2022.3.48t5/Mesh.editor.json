@@ -1,0 +1,4208 @@
+{
+  "typeId": 43,
+  "size": 1064,
+  "namespace": "",
+  "module": "Core",
+  "nodes": [
+    {
+      "level": 0,
+      "type": "Mesh",
+      "name": "Base",
+      "byteSize": -1,
+      "index": 0,
+      "version": 11,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "unsigned int",
+      "name": "m_ObjectHideFlags",
+      "byteSize": 4,
+      "index": 1,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "PPtr<EditorExtension>",
+      "name": "m_CorrespondingSourceObject",
+      "byteSize": 12,
+      "index": 2,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_FileID",
+      "byteSize": 4,
+      "index": 3,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "SInt64",
+      "name": "m_PathID",
+      "byteSize": 8,
+      "index": 4,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "PPtr<PrefabInstance>",
+      "name": "m_PrefabInstance",
+      "byteSize": 12,
+      "index": 5,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_FileID",
+      "byteSize": 4,
+      "index": 6,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "SInt64",
+      "name": "m_PathID",
+      "byteSize": 8,
+      "index": 7,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "PPtr<Prefab>",
+      "name": "m_PrefabAsset",
+      "byteSize": 12,
+      "index": 8,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "m_FileID",
+      "byteSize": 4,
+      "index": 9,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "SInt64",
+      "name": "m_PathID",
+      "byteSize": 8,
+      "index": 10,
+      "version": 1,
+      "metaFlag": 8388609,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "string",
+      "name": "m_Name",
+      "byteSize": -1,
+      "index": 11,
+      "version": 1,
+      "metaFlag": 557057,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 12,
+      "version": 1,
+      "metaFlag": 540673,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 13,
+      "version": 1,
+      "metaFlag": 524289,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 14,
+      "version": 1,
+      "metaFlag": 524289,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "m_SubMeshes",
+      "byteSize": -1,
+      "index": 15,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 16,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 17,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "SubMesh",
+      "name": "data",
+      "byteSize": 48,
+      "index": 18,
+      "version": 2,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "firstByte",
+      "byteSize": 4,
+      "index": 19,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "indexCount",
+      "byteSize": 4,
+      "index": 20,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "topology",
+      "byteSize": 4,
+      "index": 21,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "baseVertex",
+      "byteSize": 4,
+      "index": 22,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "firstVertex",
+      "byteSize": 4,
+      "index": 23,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "vertexCount",
+      "byteSize": 4,
+      "index": 24,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "AABB",
+      "name": "localAABB",
+      "byteSize": 24,
+      "index": 25,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "Vector3f",
+      "name": "m_Center",
+      "byteSize": 12,
+      "index": 26,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 27,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 28,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 29,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "Vector3f",
+      "name": "m_Extent",
+      "byteSize": 12,
+      "index": 30,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 31,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 32,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 33,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "BlendShapeData",
+      "name": "m_Shapes",
+      "byteSize": -1,
+      "index": 34,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "vector",
+      "name": "vertices",
+      "byteSize": -1,
+      "index": 35,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 36,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 37,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "BlendShapeVertex",
+      "name": "data",
+      "byteSize": 40,
+      "index": 38,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "Vector3f",
+      "name": "vertex",
+      "byteSize": 12,
+      "index": 39,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 40,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 41,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 42,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "Vector3f",
+      "name": "normal",
+      "byteSize": 12,
+      "index": 43,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 44,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 45,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 46,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "Vector3f",
+      "name": "tangent",
+      "byteSize": 12,
+      "index": 47,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 48,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 49,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 50,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "unsigned int",
+      "name": "index",
+      "byteSize": 4,
+      "index": 51,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "vector",
+      "name": "shapes",
+      "byteSize": -1,
+      "index": 52,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 53,
+      "version": 1,
+      "metaFlag": 49153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 54,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "MeshBlendShape",
+      "name": "data",
+      "byteSize": 10,
+      "index": 55,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "unsigned int",
+      "name": "firstVertex",
+      "byteSize": 4,
+      "index": 56,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "unsigned int",
+      "name": "vertexCount",
+      "byteSize": 4,
+      "index": 57,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "bool",
+      "name": "hasNormals",
+      "byteSize": 1,
+      "index": 58,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "bool",
+      "name": "hasTangents",
+      "byteSize": 1,
+      "index": 59,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "vector",
+      "name": "channels",
+      "byteSize": -1,
+      "index": 60,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 61,
+      "version": 1,
+      "metaFlag": 49153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 62,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "MeshBlendShapeChannel",
+      "name": "data",
+      "byteSize": -1,
+      "index": 63,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "string",
+      "name": "name",
+      "byteSize": -1,
+      "index": 64,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 6,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 65,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 7,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 66,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 7,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 67,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "unsigned int",
+      "name": "nameHash",
+      "byteSize": 4,
+      "index": 68,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "frameIndex",
+      "byteSize": 4,
+      "index": 69,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "frameCount",
+      "byteSize": 4,
+      "index": 70,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "vector",
+      "name": "fullWeights",
+      "byteSize": -1,
+      "index": 71,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 72,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 73,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "data",
+      "byteSize": 4,
+      "index": 74,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "m_BindPose",
+      "byteSize": -1,
+      "index": 75,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 76,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 77,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Matrix4x4f",
+      "name": "data",
+      "byteSize": 64,
+      "index": 78,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e00",
+      "byteSize": 4,
+      "index": 79,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e01",
+      "byteSize": 4,
+      "index": 80,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e02",
+      "byteSize": 4,
+      "index": 81,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e03",
+      "byteSize": 4,
+      "index": 82,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e10",
+      "byteSize": 4,
+      "index": 83,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e11",
+      "byteSize": 4,
+      "index": 84,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e12",
+      "byteSize": 4,
+      "index": 85,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e13",
+      "byteSize": 4,
+      "index": 86,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e20",
+      "byteSize": 4,
+      "index": 87,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e21",
+      "byteSize": 4,
+      "index": 88,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e22",
+      "byteSize": 4,
+      "index": 89,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e23",
+      "byteSize": 4,
+      "index": 90,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e30",
+      "byteSize": 4,
+      "index": 91,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e31",
+      "byteSize": 4,
+      "index": 92,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e32",
+      "byteSize": 4,
+      "index": 93,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "float",
+      "name": "e33",
+      "byteSize": 4,
+      "index": 94,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "m_BoneNameHashes",
+      "byteSize": -1,
+      "index": 95,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 96,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 97,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "data",
+      "byteSize": 4,
+      "index": 98,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "unsigned int",
+      "name": "m_RootBoneNameHash",
+      "byteSize": 4,
+      "index": 99,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "m_BonesAABB",
+      "byteSize": -1,
+      "index": 100,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 101,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 102,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "MinMaxAABB",
+      "name": "data",
+      "byteSize": 24,
+      "index": 103,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "m_Min",
+      "byteSize": 12,
+      "index": 104,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 105,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 106,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 107,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "m_Max",
+      "byteSize": 12,
+      "index": 108,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 109,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 110,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 111,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "VariableBoneCountWeights",
+      "name": "m_VariableBoneCountWeights",
+      "byteSize": -1,
+      "index": 112,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 113,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 114,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 115,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "data",
+      "byteSize": 4,
+      "index": 116,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "UInt8",
+      "name": "m_MeshCompression",
+      "byteSize": 1,
+      "index": 117,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_IsReadable",
+      "byteSize": 1,
+      "index": 118,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_KeepVertices",
+      "byteSize": 1,
+      "index": 119,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_KeepIndices",
+      "byteSize": 1,
+      "index": 120,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_LightmapUseUV1",
+      "byteSize": 4,
+      "index": 121,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "float",
+      "name": "m_fileScale",
+      "byteSize": 4,
+      "index": 122,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "rootClusterPage",
+      "byteSize": -1,
+      "index": 123,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 124,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 125,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 126,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "hierarchyNodes",
+      "byteSize": -1,
+      "index": 127,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 128,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 129,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "VGPackedHierarchyNode",
+      "name": "data",
+      "byteSize": 416,
+      "index": 130,
+      "version": 3,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector4f",
+      "name": "LODBounds0",
+      "byteSize": 16,
+      "index": 131,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 132,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 133,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 134,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "w",
+      "byteSize": 4,
+      "index": 135,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBCenter0",
+      "byteSize": 12,
+      "index": 136,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 137,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 138,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 139,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "minLodError_maxParentLodError0",
+      "byteSize": 4,
+      "index": 140,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBExtent0",
+      "byteSize": 12,
+      "index": 141,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 142,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 143,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 144,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "childStartIndex0",
+      "byteSize": 4,
+      "index": 145,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "pageIndex_pageCount_pageBlockCount0",
+      "byteSize": 4,
+      "index": 146,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector4f",
+      "name": "LODBounds1",
+      "byteSize": 16,
+      "index": 147,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 148,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 149,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 150,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "w",
+      "byteSize": 4,
+      "index": 151,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBCenter1",
+      "byteSize": 12,
+      "index": 152,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 153,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 154,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 155,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "minLodError_maxParentLodError1",
+      "byteSize": 4,
+      "index": 156,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBExtent1",
+      "byteSize": 12,
+      "index": 157,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 158,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 159,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 160,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "childStartIndex1",
+      "byteSize": 4,
+      "index": 161,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "pageIndex_pageCount_pageBlockCount1",
+      "byteSize": 4,
+      "index": 162,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector4f",
+      "name": "LODBounds2",
+      "byteSize": 16,
+      "index": 163,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 164,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 165,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 166,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "w",
+      "byteSize": 4,
+      "index": 167,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBCenter2",
+      "byteSize": 12,
+      "index": 168,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 169,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 170,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 171,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "minLodError_maxParentLodError2",
+      "byteSize": 4,
+      "index": 172,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBExtent2",
+      "byteSize": 12,
+      "index": 173,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 174,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 175,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 176,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "childStartIndex2",
+      "byteSize": 4,
+      "index": 177,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "pageIndex_pageCount_pageBlockCount2",
+      "byteSize": 4,
+      "index": 178,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector4f",
+      "name": "LODBounds3",
+      "byteSize": 16,
+      "index": 179,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 180,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 181,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 182,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "w",
+      "byteSize": 4,
+      "index": 183,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBCenter3",
+      "byteSize": 12,
+      "index": 184,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 185,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 186,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 187,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "minLodError_maxParentLodError3",
+      "byteSize": 4,
+      "index": 188,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBExtent3",
+      "byteSize": 12,
+      "index": 189,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 190,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 191,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 192,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "childStartIndex3",
+      "byteSize": 4,
+      "index": 193,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "pageIndex_pageCount_pageBlockCount3",
+      "byteSize": 4,
+      "index": 194,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector4f",
+      "name": "LODBounds4",
+      "byteSize": 16,
+      "index": 195,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 196,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 197,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 198,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "w",
+      "byteSize": 4,
+      "index": 199,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBCenter4",
+      "byteSize": 12,
+      "index": 200,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 201,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 202,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 203,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "minLodError_maxParentLodError4",
+      "byteSize": 4,
+      "index": 204,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBExtent4",
+      "byteSize": 12,
+      "index": 205,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 206,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 207,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 208,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "childStartIndex4",
+      "byteSize": 4,
+      "index": 209,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "pageIndex_pageCount_pageBlockCount4",
+      "byteSize": 4,
+      "index": 210,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector4f",
+      "name": "LODBounds5",
+      "byteSize": 16,
+      "index": 211,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 212,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 213,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 214,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "w",
+      "byteSize": 4,
+      "index": 215,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBCenter5",
+      "byteSize": 12,
+      "index": 216,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 217,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 218,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 219,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "minLodError_maxParentLodError5",
+      "byteSize": 4,
+      "index": 220,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBExtent5",
+      "byteSize": 12,
+      "index": 221,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 222,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 223,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 224,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "childStartIndex5",
+      "byteSize": 4,
+      "index": 225,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "pageIndex_pageCount_pageBlockCount5",
+      "byteSize": 4,
+      "index": 226,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector4f",
+      "name": "LODBounds6",
+      "byteSize": 16,
+      "index": 227,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 228,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 229,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 230,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "w",
+      "byteSize": 4,
+      "index": 231,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBCenter6",
+      "byteSize": 12,
+      "index": 232,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 233,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 234,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 235,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "minLodError_maxParentLodError6",
+      "byteSize": 4,
+      "index": 236,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBExtent6",
+      "byteSize": 12,
+      "index": 237,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 238,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 239,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 240,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "childStartIndex6",
+      "byteSize": 4,
+      "index": 241,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "pageIndex_pageCount_pageBlockCount6",
+      "byteSize": 4,
+      "index": 242,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector4f",
+      "name": "LODBounds7",
+      "byteSize": 16,
+      "index": 243,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 244,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 245,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 246,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "w",
+      "byteSize": 4,
+      "index": 247,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBCenter7",
+      "byteSize": 12,
+      "index": 248,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 249,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 250,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 251,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "minLodError_maxParentLodError7",
+      "byteSize": 4,
+      "index": 252,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Vector3f",
+      "name": "AABBExtent7",
+      "byteSize": 12,
+      "index": 253,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 254,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 255,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 256,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "childStartIndex7",
+      "byteSize": 4,
+      "index": 257,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "pageIndex_pageCount_pageBlockCount7",
+      "byteSize": 4,
+      "index": 258,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "pageStreamingInfos",
+      "byteSize": -1,
+      "index": 259,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 260,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 261,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "VGPageStreamingInfo",
+      "name": "data",
+      "byteSize": 24,
+      "index": 262,
+      "version": 3,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "offset",
+      "byteSize": 4,
+      "index": 263,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "wholeSize",
+      "byteSize": 4,
+      "index": 264,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "dataSize",
+      "byteSize": 4,
+      "index": 265,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "dependencyOffset",
+      "byteSize": 4,
+      "index": 266,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "dependencyCount",
+      "byteSize": 4,
+      "index": 267,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "unsigned int",
+      "name": "flags",
+      "byteSize": 4,
+      "index": 268,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "pageIndicesOfDependencies",
+      "byteSize": -1,
+      "index": 269,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 270,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 271,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "data",
+      "byteSize": 4,
+      "index": 272,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "unsigned int",
+      "name": "inputTrianglesCount",
+      "byteSize": 4,
+      "index": 273,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "unsigned int",
+      "name": "inputVerticesCount",
+      "byteSize": 4,
+      "index": 274,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "UInt16",
+      "name": "inputMeshesCount",
+      "byteSize": 2,
+      "index": 275,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "UInt16",
+      "name": "inputTexCoordsCount",
+      "byteSize": 2,
+      "index": 276,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "unsigned int",
+      "name": "resourceFlags",
+      "byteSize": 4,
+      "index": 277,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "imposterAtlas",
+      "byteSize": -1,
+      "index": 278,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 279,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 280,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt16",
+      "name": "data",
+      "byteSize": 2,
+      "index": 281,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "hierarchyRootOffsets",
+      "byteSize": -1,
+      "index": 282,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 283,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 284,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "data",
+      "byteSize": 4,
+      "index": 285,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "TypelessData",
+      "name": "streamableClusterPageSize",
+      "byteSize": -1,
+      "index": 286,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 287,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 288,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_IndexFormat",
+      "byteSize": 4,
+      "index": 289,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "m_IndexBuffer",
+      "byteSize": -1,
+      "index": 290,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 291,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 292,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 293,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "VertexData",
+      "name": "m_VertexData",
+      "byteSize": -1,
+      "index": 294,
+      "version": 3,
+      "metaFlag": 49153,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "m_VertexCount",
+      "byteSize": 4,
+      "index": 295,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "vector",
+      "name": "m_Channels",
+      "byteSize": -1,
+      "index": 296,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 297,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 298,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "ChannelInfo",
+      "name": "data",
+      "byteSize": 4,
+      "index": 299,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "stream",
+      "byteSize": 1,
+      "index": 300,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "offset",
+      "byteSize": 1,
+      "index": 301,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "format",
+      "byteSize": 1,
+      "index": 302,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "dimension",
+      "byteSize": 1,
+      "index": 303,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "TypelessData",
+      "name": "m_DataSize",
+      "byteSize": -1,
+      "index": 304,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 305,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 306,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "CompressedMesh",
+      "name": "m_CompressedMesh",
+      "byteSize": -1,
+      "index": 307,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_Vertices",
+      "byteSize": -1,
+      "index": 308,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 309,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Range",
+      "byteSize": 4,
+      "index": 310,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Start",
+      "byteSize": 4,
+      "index": 311,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 312,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 313,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 314,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 315,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 316,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_UV",
+      "byteSize": -1,
+      "index": 317,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 318,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Range",
+      "byteSize": 4,
+      "index": 319,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Start",
+      "byteSize": 4,
+      "index": 320,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 321,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 322,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 323,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 324,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 325,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_Normals",
+      "byteSize": -1,
+      "index": 326,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 327,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Range",
+      "byteSize": 4,
+      "index": 328,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Start",
+      "byteSize": 4,
+      "index": 329,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 330,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 331,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 332,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 333,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 334,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_Tangents",
+      "byteSize": -1,
+      "index": 335,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 336,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Range",
+      "byteSize": 4,
+      "index": 337,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Start",
+      "byteSize": 4,
+      "index": 338,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 339,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 340,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 341,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 342,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 343,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_Weights",
+      "byteSize": -1,
+      "index": 344,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 345,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 346,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 347,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 348,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 349,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 350,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_NormalSigns",
+      "byteSize": -1,
+      "index": 351,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 352,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 353,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 354,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 355,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 356,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 357,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_TangentSigns",
+      "byteSize": -1,
+      "index": 358,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 359,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 360,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 361,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 362,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 363,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 364,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_FloatColors",
+      "byteSize": -1,
+      "index": 365,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 366,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Range",
+      "byteSize": 4,
+      "index": 367,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "m_Start",
+      "byteSize": 4,
+      "index": 368,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 369,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 370,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 371,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 372,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 373,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_BoneIndices",
+      "byteSize": -1,
+      "index": 374,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 375,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 376,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 377,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 378,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 379,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 380,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "PackedBitVector",
+      "name": "m_Triangles",
+      "byteSize": -1,
+      "index": 381,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "unsigned int",
+      "name": "m_NumItems",
+      "byteSize": 4,
+      "index": 382,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "vector",
+      "name": "m_Data",
+      "byteSize": -1,
+      "index": 383,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 384,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 385,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 5,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 386,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "m_BitSize",
+      "byteSize": 1,
+      "index": 387,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "m_UVInfo",
+      "byteSize": 4,
+      "index": 388,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "AABB",
+      "name": "m_LocalAABB",
+      "byteSize": 24,
+      "index": 389,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Vector3f",
+      "name": "m_Center",
+      "byteSize": 12,
+      "index": 390,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 391,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 392,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 393,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Vector3f",
+      "name": "m_Extent",
+      "byteSize": 12,
+      "index": 394,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "x",
+      "byteSize": 4,
+      "index": 395,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "y",
+      "byteSize": 4,
+      "index": 396,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "float",
+      "name": "z",
+      "byteSize": 4,
+      "index": 397,
+      "version": 1,
+      "metaFlag": 2097153,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_MeshUsageFlags",
+      "byteSize": 4,
+      "index": 398,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_CookingOptions",
+      "byteSize": 4,
+      "index": 399,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "m_BakedConvexCollisionMesh",
+      "byteSize": -1,
+      "index": 400,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 401,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 402,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 403,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "vector",
+      "name": "m_BakedTriangleCollisionMesh",
+      "byteSize": -1,
+      "index": 404,
+      "version": 1,
+      "metaFlag": 32769,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 405,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 406,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "UInt8",
+      "name": "data",
+      "byteSize": 1,
+      "index": 407,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "float",
+      "name": "m_MeshMetrics[0]",
+      "byteSize": 4,
+      "index": 408,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "float",
+      "name": "m_MeshMetrics[1]",
+      "byteSize": 4,
+      "index": 409,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "int",
+      "name": "m_MeshOptimizationFlags",
+      "byteSize": 4,
+      "index": 410,
+      "version": 1,
+      "metaFlag": 8404993,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "StreamingInfo",
+      "name": "m_StreamData",
+      "byteSize": -1,
+      "index": 411,
+      "version": 2,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "UInt64",
+      "name": "offset",
+      "byteSize": 8,
+      "index": 412,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "unsigned int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 413,
+      "version": 1,
+      "metaFlag": 0,
+      "flags": 0
+    },
+    {
+      "level": 2,
+      "type": "string",
+      "name": "path",
+      "byteSize": -1,
+      "index": 414,
+      "version": 1,
+      "metaFlag": 32768,
+      "flags": 0
+    },
+    {
+      "level": 3,
+      "type": "Array",
+      "name": "Array",
+      "byteSize": -1,
+      "index": 415,
+      "version": 1,
+      "metaFlag": 16385,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "int",
+      "name": "size",
+      "byteSize": 4,
+      "index": 416,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 4,
+      "type": "char",
+      "name": "data",
+      "byteSize": 1,
+      "index": 417,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_GenerateGeometryBuffer",
+      "byteSize": 1,
+      "index": 418,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    },
+    {
+      "level": 1,
+      "type": "bool",
+      "name": "m_HasVirtualGeometryMesh",
+      "byteSize": 1,
+      "index": 419,
+      "version": 1,
+      "metaFlag": 1,
+      "flags": 0
+    }
+  ]
+}
