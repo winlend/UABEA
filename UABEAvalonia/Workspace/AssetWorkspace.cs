@@ -403,7 +403,9 @@ namespace UABEAvalonia
                     return baseTemp;
 
                 MonoCecilTempGenerator mc = new MonoCecilTempGenerator(managedPath);
-                baseTemp = mc.GetTemplateField(baseTemp, assemblyName, scriptNamespace, scriptClassName, new UnityVersion(file.Metadata.UnityVersion));
+                // Map Tuanjie "t" versions so shipped UnityVersion can parse them.
+                string monoVer = TuanjieVersion.MapForClassDatabase(file.Metadata.UnityVersion);
+                baseTemp = mc.GetTemplateField(baseTemp, assemblyName, scriptNamespace, scriptClassName, new UnityVersion(monoVer));
             }
             return baseTemp;
         }

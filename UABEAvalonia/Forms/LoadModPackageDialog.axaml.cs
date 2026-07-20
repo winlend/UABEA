@@ -189,7 +189,7 @@ namespace UABEAvalonia
         private async Task<bool> LoadOrAskTypeData(AssetsFileInstance fileInst)
         {
             string uVer = fileInst.file.Metadata.UnityVersion;
-            am.LoadClassDatabaseFromPackage(uVer);
+            TuanjieVersion.LoadClassDatabase(am, uVer);
             //if (am.LoadClassDatabaseFromPackage(uVer) == null)
             //{
             //    VersionWindow version = new VersionWindow(uVer, am.classPackage);

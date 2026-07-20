@@ -25,14 +25,18 @@ namespace UABEAvalonia
         private async void BtnYes_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             string returnText = boxVer.Text ?? string.Empty;
-            try
+            // Shipped UnityVersion throws on Tuanjie "t"; accept those via helper.
+            if (!TuanjieVersion.IsTuanjie(returnText))
             {
-                _ = new UnityVersion(returnText);
-            }
-            catch
-            {
-                await MessageBoxUtil.ShowDialog(this, "Error", "Invalid version string. Example: 2019.4.1f1");
-                return;
+                try
+                {
+                    _ = new UnityVersion(returnText);
+                }
+                catch
+                {
+                    await MessageBoxUtil.ShowDialog(this, "Error", "Invalid version string. Examples: 2019.4.1f1, 2022.3.48t3 (Tuanjie)");
+                    return;
+                }
             }
             Close(returnText);
         }

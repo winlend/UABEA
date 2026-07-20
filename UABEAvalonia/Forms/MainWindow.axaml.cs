@@ -612,7 +612,9 @@ namespace UABEAvalonia
                 }
             }
 
-            am.LoadClassDatabaseFromPackage(uVer);
+            // Tuanjie versions use suffix "t" (e.g. 2022.3.48t5). The shipped AssetsTools
+            // UnityVersion parser throws on "t"; map to a classdata key it can load.
+            TuanjieVersion.LoadClassDatabase(am, uVer);
             return true;
         }
 
