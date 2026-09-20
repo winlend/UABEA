@@ -4,10 +4,15 @@
 //   validate-tj3d  - load data.tj3d and deserialize Texture2D/Mesh/Shader samples
 //   rewrite-tex    - rename first Texture2D in data.tj3d assets, save, reload
 //
+//   dump-tex       - list Texture2D stream vs inline layout
+//   rewrite-ress   - ResourceFileBuffer + keep-streaming rewrite test
+//
 // Usage examples:
 //   dotnet run -c Release --project tools/TuanjiePsValidate -- "F:/AI Works/Projects/UnityAssets" validate-types
 //   dotnet run -c Release --project tools/TuanjiePsValidate -- "F:/AI Works/Projects/UnityAssets" validate-tj3d
 //   dotnet run -c Release --project tools/TuanjiePsValidate -- "F:/AI Works/Projects/UnityAssets" rewrite-tex "HelloTex"
+//   dotnet run -c Release --project tools/TuanjiePsValidate -- "F:/AI Works/Projects/UnityAssets" dump-tex "F:/Harmony/Tuanjie/11/globalgamemanagers.assets"
+//   dotnet run -c Release --project tools/TuanjiePsValidate -- "F:/AI Works/Projects/UnityAssets" rewrite-ress "F:/Harmony/Tuanjie/11/globalgamemanagers.assets"
 using AssetsTools.NET;
 using AssetsTools.NET.Extra;
 using UABEAvalonia;
@@ -49,8 +54,281 @@ return mode switch
     "validate-types" => ValidateTypeDumps(ggm, tpk),
     "validate-tj3d" => ValidateTj3d(tj3d, tpk),
     "rewrite-tex" => RewriteTextureName(tj3d, tpk, newName),
+    "dump-tex" => DumpTextures(args.Length > 2 ? args[2] : ggm, tpk),
+    "rewrite-ress" => RewriteResS(args.Length > 2 ? args[2] : ggm, tpk),
     _ => FailUnknown(mode)
 };
+
+static int DumpTextures(string assetsPath, string tpk)
+{
+    Console.WriteLine("assets=" + assetsPath);
+    if (!File.Exists(assetsPath))
+    {
+        Console.WriteLine("missing assets file");
+        return 2;
+    }
+
+    var am = CreateManager(tpk);
+    AssetsFileInstance inst = am.LoadAssetsFile(assetsPath, false);
+    AssetsFile file = inst.file;
+    Console.WriteLine("unityVersion=" + file.Metadata.UnityVersion);
+    Console.WriteLine("hasTypeTree=" + file.Metadata.TypeTreeEnabled);
+    Console.WriteLine("assetCount=" + file.AssetInfos.Count);
+    _ = RequireClassDb(am, file.Metadata.UnityVersion);
+
+    long inlineBytes = 0;
+    long streamBytes = 0;
+    long dataStreamBytes = 0;
+    int texCount = 0, streamed = 0, inlined = 0, dataStreamed = 0, fail = 0;
+    var rows = new List<string>();
+
+    foreach (AssetFileInfo info in file.AssetInfos)
+    {
+        if (info.TypeId != 28)
+            continue;
+        texCount++;
+        AssetTypeValueField? bf = am.GetBaseField(inst, info);
+        if (bf == null)
+        {
+            fail++;
+            rows.Add($"FAIL pathId={info.PathId} size={info.ByteSize}");
+            continue;
+        }
+
+        string name = SafeString(bf["m_Name"]);
+        int w = bf["m_Width"].IsDummy ? -1 : bf["m_Width"].AsInt;
+        int h = bf["m_Height"].IsDummy ? -1 : bf["m_Height"].AsInt;
+        int fmt = bf["m_TextureFormat"].IsDummy ? -1 : bf["m_TextureFormat"].AsInt;
+        int complete = bf["m_CompleteImageSize"].IsDummy ? -1 : bf["m_CompleteImageSize"].AsInt;
+
+        int imgLen = 0;
+        AssetTypeValueField img = bf["image data"];
+        if (!img.IsDummy)
+        {
+            if (img.Value != null && img.Value.ValueType == AssetValueType.ByteArray)
+                imgLen = img.AsByteArray?.Length ?? 0;
+            else if (!img["Array"].IsDummy)
+                imgLen = img["Array"].AsByteArray?.Length ?? img["Array"].Children.Count;
+            else if (!img["size"].IsDummy)
+                imgLen = img["size"].AsInt;
+        }
+
+        AssetTypeValueField stream = bf["m_StreamData"];
+        ulong soff = 0; uint ssize = 0; string spath = "";
+        if (!stream.IsDummy)
+        {
+            soff = stream["offset"].IsDummy ? 0UL : stream["offset"].AsULong;
+            ssize = stream["size"].IsDummy ? 0u : stream["size"].AsUInt;
+            spath = stream["path"].IsDummy ? "" : stream["path"].AsString;
+        }
+
+        AssetTypeValueField dstream = bf["m_DataStreamData"];
+        uint dsize = 0; string dpath = "";
+        if (!dstream.IsDummy)
+        {
+            dsize = dstream["size"].IsDummy ? 0u : dstream["size"].AsUInt;
+            dpath = dstream["path"].IsDummy ? "" : dstream["path"].AsString;
+        }
+
+        bool web = !bf["m_WebStreaming"].IsDummy && bf["m_WebStreaming"].AsBool;
+
+        inlineBytes += imgLen;
+        streamBytes += ssize;
+        dataStreamBytes += dsize;
+        if (!string.IsNullOrEmpty(spath) && ssize > 0) streamed++;
+        else if (imgLen > 0) inlined++;
+        if (!string.IsNullOrEmpty(dpath) && dsize > 0) dataStreamed++;
+
+        rows.Add($"pathId={info.PathId,-6} {w}x{h} fmt={fmt,-3} complete={complete,-8} img={imgLen,-8} stream={ssize}@{soff} path='{spath}' dataStream={dsize} dpath='{dpath}' web={web} name={name}");
+    }
+
+    foreach (string r in rows)
+        Console.WriteLine(r);
+
+    Console.WriteLine($"texCount={texCount} streamed={streamed} inlined={inlined} dataStreamed={dataStreamed} fail={fail}");
+    Console.WriteLine($"inlineBytes={inlineBytes} streamBytes={streamBytes} dataStreamBytes={dataStreamBytes}");
+    string ress = assetsPath + ".resS";
+    Console.WriteLine($"resS exists={File.Exists(ress)} size={(File.Exists(ress) ? new FileInfo(ress).Length : 0)}");
+    return fail == 0 ? 0 : 6;
+}
+
+static int RewriteResS(string assetsPath, string tpk)
+{
+    int fail = 0;
+    fail += TestResourceBufferInPlace();
+    fail += TestResourceBufferAppend();
+
+    string ressPath = assetsPath + ".resS";
+    if (File.Exists(assetsPath) && File.Exists(ressPath))
+        fail += TestKeepStreamingRewrite(assetsPath, ressPath, tpk);
+    else
+        Console.WriteLine("SKIP keep-streaming integration (need assets + .resS): " + assetsPath);
+
+    Console.WriteLine(fail == 0 ? "PASS rewrite-ress" : "FAIL rewrite-ress fail=" + fail);
+    return fail == 0 ? 0 : 8;
+}
+
+static int TestResourceBufferInPlace()
+{
+    byte[] orig = new byte[100];
+    for (int i = 0; i < orig.Length; i++)
+        orig[i] = (byte)i;
+
+    var buf = new ResourceFileBuffer("x.resS", "x.assets", orig);
+    byte[] neu = new byte[50];
+    Array.Fill(neu, (byte)0xAB);
+    ulong off = buf.WriteSlot(0, 100, neu);
+    if (off != 0) { Console.WriteLine("FAIL in-place offset " + off); return 1; }
+    if (buf.Length != 100) { Console.WriteLine("FAIL in-place length " + buf.Length); return 1; }
+    byte[] got = buf.GetBytes();
+    if (got[0] != 0xAB || got[49] != 0xAB || got[50] != 50)
+    {
+        Console.WriteLine("FAIL in-place bytes");
+        return 1;
+    }
+    Console.WriteLine("PASS buffer in-place");
+    return 0;
+}
+
+static int TestResourceBufferAppend()
+{
+    byte[] orig = new byte[30];
+    var buf = new ResourceFileBuffer("x.resS", "x.assets", orig);
+    byte[] neu = new byte[40];
+    Array.Fill(neu, (byte)0xCD);
+    ulong off = buf.WriteSlot(0, 10, neu);
+    int expectOff = ResourceFileBuffer.Align16(30);
+    if (off != (ulong)expectOff) { Console.WriteLine($"FAIL append offset {off} expected {expectOff}"); return 1; }
+    if (buf.Length != expectOff + 40) { Console.WriteLine("FAIL append length " + buf.Length); return 1; }
+    byte[] slice = buf.Read(off, 40) ?? Array.Empty<byte>();
+    if (slice.Length != 40 || slice[0] != 0xCD)
+    {
+        Console.WriteLine("FAIL append bytes");
+        return 1;
+    }
+    Console.WriteLine("PASS buffer append");
+    return 0;
+}
+
+static int TestKeepStreamingRewrite(string assetsPath, string ressPath, string tpk)
+{
+    string tmp = Path.Combine(Path.GetTempPath(), "uabea-ress-" + DateTime.Now.ToString("yyyyMMddHHmmss"));
+    Directory.CreateDirectory(tmp);
+    string tmpAssets = Path.Combine(tmp, Path.GetFileName(assetsPath));
+    string tmpResS = tmpAssets + ".resS";
+    File.Copy(assetsPath, tmpAssets);
+    File.Copy(ressPath, tmpResS);
+
+    long origAssetsSize = new FileInfo(tmpAssets).Length;
+    long origResSSize = new FileInfo(tmpResS).Length;
+    Console.WriteLine($"keep-streaming tmp={tmp} assets={origAssetsSize} resS={origResSSize}");
+
+    var am = CreateManager(tpk);
+    AssetsFileInstance inst = am.LoadAssetsFile(tmpAssets, false);
+    _ = RequireClassDb(am, inst.file.Metadata.UnityVersion);
+
+    AssetFileInfo? texInfo = FindType(inst.file, 28);
+    if (texInfo == null)
+    {
+        Console.WriteLine("FAIL no Texture2D");
+        return 1;
+    }
+
+    AssetTypeValueField bf = am.GetBaseField(inst, texInfo) ?? throw new Exception("baseField null");
+    AssetTypeValueField stream = bf["m_StreamData"];
+    if (stream.IsDummy || string.IsNullOrEmpty(stream["path"].AsString) || stream["size"].AsUInt == 0)
+    {
+        Console.WriteLine("FAIL sample is not streamed");
+        return 1;
+    }
+
+    string streamPath = stream["path"].AsString;
+    ulong streamOff = stream["offset"].AsULong;
+    uint streamSize = stream["size"].AsUInt;
+
+    byte[] onDisk = File.ReadAllBytes(tmpResS);
+    if ((ulong)onDisk.Length < streamOff + streamSize)
+    {
+        Console.WriteLine("FAIL resS shorter than stream slot");
+        return 1;
+    }
+    byte[] payload = new byte[streamSize];
+    Buffer.BlockCopy(onDisk, (int)streamOff, payload, 0, (int)streamSize);
+    payload[0] ^= 0xFF;
+
+    var buf = ResourceFileBuffer.Load(tmpResS, tmpAssets);
+    ulong newOff = buf.WriteSlot(streamOff, streamSize, payload);
+    if (newOff != streamOff)
+    {
+        Console.WriteLine($"FAIL expected in-place offset {streamOff} got {newOff}");
+        return 1;
+    }
+    buf.WriteToFile(tmpResS);
+
+    AssetTypeValueField imageData = bf["image data"];
+    imageData.Value.ValueType = AssetValueType.ByteArray;
+    imageData.TemplateField.ValueType = AssetValueType.ByteArray;
+    imageData.AsByteArray = Array.Empty<byte>();
+    stream["offset"].AsULong = newOff;
+    stream["size"].AsUInt = (uint)payload.Length;
+    stream["path"].AsString = streamPath;
+    bf["m_Name"].AsString = SafeString(bf["m_Name"]) + "_ress";
+
+    byte[] newBytes = bf.WriteToByteArray();
+    var replacer = new AssetsReplacerFromMemory(inst.file, texInfo, newBytes);
+    string outAssets = tmpAssets + ".out";
+    using (FileStream fs = File.Create(outAssets))
+    using (AssetsFileWriter w = new AssetsFileWriter(fs))
+        inst.file.Write(w, 0, new List<AssetsReplacer> { replacer }, null!);
+
+    long newAssetsSize = new FileInfo(outAssets).Length;
+    long newResSSize = new FileInfo(tmpResS).Length;
+    Console.WriteLine($"rewritten assets={newAssetsSize} resS={newResSSize}");
+
+    if (newAssetsSize > origAssetsSize + 4096)
+    {
+        Console.WriteLine("FAIL assets grew as if texture was inlined");
+        return 1;
+    }
+    if (newResSSize != origResSSize)
+    {
+        Console.WriteLine("FAIL resS size changed on in-place write");
+        return 1;
+    }
+
+    var am2 = CreateManager(tpk);
+    AssetsFileInstance inst2 = am2.LoadAssetsFile(outAssets, false);
+    _ = RequireClassDb(am2, inst2.file.Metadata.UnityVersion);
+    AssetFileInfo tex2 = RequireType(inst2.file, 28);
+    AssetTypeValueField bf2 = am2.GetBaseField(inst2, tex2) ?? throw new Exception("reload null");
+    string path2 = bf2["m_StreamData"]["path"].AsString;
+    uint size2 = bf2["m_StreamData"]["size"].AsUInt;
+    int img2 = 0;
+    AssetTypeValueField imgField = bf2["image data"];
+    if (!imgField.IsDummy)
+    {
+        if (imgField.Value != null && imgField.Value.ValueType == AssetValueType.ByteArray)
+            img2 = imgField.AsByteArray?.Length ?? 0;
+        else if (!imgField["size"].IsDummy)
+            img2 = imgField["size"].AsInt;
+    }
+    if (path2 != streamPath || size2 == 0 || img2 != 0)
+    {
+        Console.WriteLine($"FAIL reload stream path='{path2}' size={size2} img={img2}");
+        return 1;
+    }
+
+    byte[] ressBytes = File.ReadAllBytes(tmpResS);
+    byte orig0 = File.ReadAllBytes(ressPath)[(int)streamOff];
+    if (ressBytes[(int)streamOff] != (byte)(orig0 ^ 0xFF))
+    {
+        Console.WriteLine("FAIL resS payload not patched");
+        return 1;
+    }
+
+    Console.WriteLine("PASS keep-streaming rewrite");
+    return 0;
+}
 
 static int FailUnknown(string mode)
 {

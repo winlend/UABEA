@@ -89,7 +89,7 @@ namespace TexturePlugin
                     continue;
                 }
 
-                byte[] data = TextureHelper.GetRawTextureBytes(texFile, cont.FileInstance);
+                byte[] data = TextureHelper.GetRawTextureBytes(texFile, cont.FileInstance, workspace);
 
                 if (data == null)
                 {
@@ -162,7 +162,7 @@ namespace TexturePlugin
                 return false;
             }
 
-            byte[] data = TextureHelper.GetRawTextureBytes(texFile, cont.FileInstance);
+            byte[] data = TextureHelper.GetRawTextureBytes(texFile, cont.FileInstance, workspace);
 
             if (data == null)
             {

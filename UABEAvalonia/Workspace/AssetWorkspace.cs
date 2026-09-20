@@ -33,6 +33,12 @@ namespace UABEAvalonia
         // changes to dependencies.
         public Dictionary<AssetsFileInstance, AssetsFileChangeTypes> OtherAssetChanges { get; }
 
+        /// <summary>
+        /// Sidecar resource files (.resS) patched in memory until Save.
+        /// Keyed by <see cref="ResourceFileBuffer.NormalizeKey"/>.
+        /// </summary>
+        public Dictionary<string, ResourceFileBuffer> PendingResourceFiles { get; }
+
         public bool Modified { get; set; }
 
         public delegate void AssetWorkspaceItemUpdateEvent(AssetsFileInstance file, AssetID assetId);
@@ -59,6 +65,7 @@ namespace UABEAvalonia
             RemovedAssets = new HashSet<AssetID>();
 
             OtherAssetChanges = new Dictionary<AssetsFileInstance, AssetsFileChangeTypes>();
+            PendingResourceFiles = new Dictionary<string, ResourceFileBuffer>();
 
             Modified = false;
 
@@ -124,7 +131,100 @@ namespace UABEAvalonia
 
             ItemUpdated?.Invoke(forFile, assetId);
 
-            if (NewAssets.Count == 0 && !AnyOtherAssetChanges())
+            if (NewAssets.Count == 0 && !AnyOtherAssetChanges() && PendingResourceFiles.Count == 0)
+                Modified = false;
+        }
+
+        /// <summary>
+        /// Queue a write into a sibling .resS (standalone serialized files only).
+        /// Returns false when the texture should be inlined instead (bundle, missing file, empty path).
+        /// </summary>
+        public bool TryQueueStreamingWrite(AssetsFileInstance inst, string streamPath, ulong originalOffset, uint originalSize, byte[] newData, out ulong newOffset, out uint newSize)
+        {
+            newOffset = 0;
+            newSize = 0;
+
+            if (fromBundle || inst == null || inst.parentBundle != null)
+                return false;
+            if (newData == null || newData.Length == 0)
+                return false;
+            if (string.IsNullOrEmpty(streamPath))
+                return false;
+            if (streamPath.StartsWith("archive:/", StringComparison.OrdinalIgnoreCase))
+                return false;
+
+            string? fullPath = ResourceFileBuffer.ResolveStandalonePath(inst.path, streamPath);
+            if (string.IsNullOrEmpty(fullPath))
+                return false;
+
+            string key = ResourceFileBuffer.NormalizeKey(fullPath);
+            if (!PendingResourceFiles.TryGetValue(key, out ResourceFileBuffer? pending))
+            {
+                if (!File.Exists(fullPath))
+                    return false;
+                pending = ResourceFileBuffer.Load(fullPath, inst.path);
+                PendingResourceFiles[key] = pending;
+            }
+
+            newOffset = pending.WriteSlot(originalOffset, originalSize, newData);
+            newSize = (uint)newData.Length;
+            Modified = true;
+            return true;
+        }
+
+        public bool TryReadStreamingData(AssetsFileInstance inst, string streamPath, ulong offset, uint size, out byte[] data)
+        {
+            data = Array.Empty<byte>();
+            if (size == 0 || string.IsNullOrEmpty(streamPath) || inst == null)
+                return false;
+
+            string? fullPath = ResourceFileBuffer.ResolveStandalonePath(inst.path, streamPath);
+            if (string.IsNullOrEmpty(fullPath))
+                return false;
+
+            string key = ResourceFileBuffer.NormalizeKey(fullPath);
+            if (!PendingResourceFiles.TryGetValue(key, out ResourceFileBuffer? pending))
+                return false;
+
+            byte[]? read = pending.Read(offset, size);
+            if (read == null)
+                return false;
+            data = read;
+            return true;
+        }
+
+        public void FlushPendingResourceFiles(AssetsFileInstance owner, string destDirectory)
+        {
+            if (owner == null || string.IsNullOrEmpty(destDirectory))
+                return;
+
+            string ownerPath = Path.GetFullPath(owner.path);
+            foreach (ResourceFileBuffer pending in PendingResourceFiles.Values)
+            {
+                if (!string.Equals(Path.GetFullPath(pending.OwnerAssetsPath), ownerPath, StringComparison.OrdinalIgnoreCase))
+                    continue;
+
+                string dest = Path.Combine(destDirectory, Path.GetFileName(pending.OriginalFullPath));
+                pending.WriteToFile(dest);
+            }
+        }
+
+        public void ClearPendingResourceFiles(AssetsFileInstance owner)
+        {
+            if (owner == null)
+                return;
+
+            string ownerPath = Path.GetFullPath(owner.path);
+            var remove = new List<string>();
+            foreach (var kv in PendingResourceFiles)
+            {
+                if (string.Equals(Path.GetFullPath(kv.Value.OwnerAssetsPath), ownerPath, StringComparison.OrdinalIgnoreCase))
+                    remove.Add(kv.Key);
+            }
+            foreach (string key in remove)
+                PendingResourceFiles.Remove(key);
+
+            if (NewAssets.Count == 0 && !AnyOtherAssetChanges() && PendingResourceFiles.Count == 0)
                 Modified = false;
         }
 

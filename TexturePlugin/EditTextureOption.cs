@@ -36,7 +36,7 @@ namespace TexturePlugin
 
             AssetTypeValueField texBaseField = TextureHelper.GetByteArrayTexture(workspace, cont);
             TextureFile texFile = TextureFile.ReadTextureFile(texBaseField);
-            EditDialog dialog = new EditDialog(texFile.m_Name, texFile, texBaseField, cont.FileInstance);
+            EditDialog dialog = new EditDialog(texFile.m_Name, texFile, texBaseField, cont.FileInstance, workspace);
             bool saved = await dialog.ShowDialog<bool>(win);
             if (saved)
             {

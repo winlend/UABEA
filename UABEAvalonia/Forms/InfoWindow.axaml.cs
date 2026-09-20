@@ -575,6 +575,7 @@ namespace UABEAvalonia
                             file.file.Write(w, 0, replacers);
                         }
 
+                        string destDir;
                         if (!saveAs)
                         {
                             string origFilePath = file.path;
@@ -586,7 +587,16 @@ namespace UABEAvalonia
                             file.file = new AssetsFile();
                             file.file.Read(new AssetsFileReader(File.OpenRead(origFilePath)));
                             file.file.GenerateQuickLookup();
+                            destDir = Path.GetDirectoryName(origFilePath)!;
                         }
+                        else
+                        {
+                            destDir = Path.GetDirectoryName(filePath)!;
+                        }
+
+                        Workspace.FlushPendingResourceFiles(file, destDir);
+                        if (!saveAs)
+                            Workspace.ClearPendingResourceFiles(file);
 
                         changedFileIds.Add(Workspace.LoadedFiles.IndexOf(file));
                     }

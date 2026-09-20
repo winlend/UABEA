@@ -110,20 +110,30 @@
     <!-- copy textureplugin -->
     <Copy SourceFiles="$(OutputPath)TexturePlugin.dll" DestinationFolder="$(UABEABinDir)plugins" ContinueOnError="true" />
   </Target>
-  
+
   <!-- publish event -->
-  <Target Name="CopyLibrariesPublish" DependsOnTargets="BuildNativeAndSetConfig" AfterTargets="Publish" Condition="'$(SolutionDir)' != '*Undefined*'">    
+  <Target Name="CopyLibrariesPublish" DependsOnTargets="BuildNativeAndSetConfig" AfterTargets="Publish" Condition="'$(SolutionDir)' != '*Undefined*'">
     <PropertyGroup>
       <UABEABinDir>$(SolutionDir)UABEAvalonia\$(PublishDir)</UABEABinDir>
     </PropertyGroup>
-    
+
     <!-- copy textoolwrap and deps -->
     <Copy SourceFiles="$(TexToolWrapBinDir)" DestinationFolder="$(UABEABinDir)runtimes\$(UABEANativeConfig)\native" ContinueOnError="true" />
     <Copy SourceFiles="$(PVRTexToolBinDir)" DestinationFolder="$(UABEABinDir)runtimes\$(UABEANativeConfig)\native" ContinueOnError="true" />
     <Copy SourceFiles="$(ISPCBinDir)" DestinationFolder="$(UABEABinDir)runtimes\$(UABEANativeConfig)\native" ContinueOnError="true" />
     <Copy SourceFiles="$(CrunchBinDir)" DestinationFolder="$(UABEABinDir)runtimes\$(UABEANativeConfig)\native" ContinueOnError="true" />
-    
+
     <!-- copy textureplugin -->
     <Copy SourceFiles="$(OutputPath)TexturePlugin.dll" DestinationFolder="$(UABEABinDir)plugins" ContinueOnError="true" />
+  </Target>
+
+  <!-- Always deploy the plugin next to UABEAvalonia, even when building this
+       csproj directly (SolutionDir is *Undefined* in that case). -->
+  <Target Name="CopyPluginToUABEA" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <UABEAPluginDir>$(MSBuildThisFileDirectory)..\UABEAvalonia\$(OutputPath)plugins</UABEAPluginDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(UABEAPluginDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(UABEAPluginDir)" SkipUnchangedFiles="false" />
   </Target>
 </Project>

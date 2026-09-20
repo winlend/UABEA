@@ -8,6 +8,7 @@
   <ItemGroup>
     <Compile Include="..\..\UABEAvalonia\Utils\TuanjieVersion.cs" Link="TuanjieVersion.cs" />
     <Compile Include="..\..\UABEAvalonia\Utils\TuanjieClassDatabasePatcher.cs" Link="TuanjieClassDatabasePatcher.cs" />
+    <Compile Include="..\..\UABEAvalonia\Utils\ResourceFileBuffer.cs" Link="ResourceFileBuffer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AssetsTools.NET">

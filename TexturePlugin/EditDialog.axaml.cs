@@ -19,6 +19,7 @@ namespace TexturePlugin
         private TextureFile tex;
         private AssetTypeValueField baseField;
         private AssetsFileInstance fileInst;
+        private AssetWorkspace workspace;
 
         private string imagePath;
 
@@ -40,11 +41,12 @@ namespace TexturePlugin
             ddColorSpace.ItemsSource = Enum.GetValues(typeof(ColorSpace));
         }
 
-        public EditDialog(string name, TextureFile tex, AssetTypeValueField baseField, AssetsFileInstance fileInst) : this()
+        public EditDialog(string name, TextureFile tex, AssetTypeValueField baseField, AssetsFileInstance fileInst, AssetWorkspace workspace = null) : this()
         {
             this.tex = tex;
             this.baseField = baseField;
             this.fileInst = fileInst;
+            this.workspace = workspace;
 
             imagePath = null;
 
@@ -95,7 +97,7 @@ namespace TexturePlugin
                     return;
                 }
 
-                byte[] data = TextureHelper.GetRawTextureBytes(tex, fileInst);
+                byte[] data = TextureHelper.GetRawTextureBytes(tex, fileInst, workspace);
                 if (data == null)
                 {
                     string dialogText = "Couldn't get texture data";
@@ -150,11 +152,6 @@ namespace TexturePlugin
                 return;
             }
 
-            AssetTypeValueField m_StreamData = baseField["m_StreamData"];
-            m_StreamData["offset"].AsInt = 0;
-            m_StreamData["size"].AsInt = 0;
-            m_StreamData["path"].AsString = "";
-
             baseField["m_Name"].AsString = boxName.Text;
 
             if (!baseField["m_MipMap"].IsDummy)
@@ -204,10 +201,7 @@ namespace TexturePlugin
             baseField["m_Width"].AsInt = width;
             baseField["m_Height"].AsInt = height;
 
-            AssetTypeValueField image_data = baseField["image data"];
-            image_data.Value.ValueType = AssetValueType.ByteArray;
-            image_data.TemplateField.ValueType = AssetValueType.ByteArray;
-            image_data.AsByteArray = encImageBytes;
+            TextureHelper.WriteTextureData(workspace, fileInst, baseField, encImageBytes);
 
             Close(true);
         }

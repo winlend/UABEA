@@ -36,7 +36,7 @@ namespace TexturePlugin
             return true;
         }
 
-        private async Task<bool> ImportTextures(Window win, List<ImportBatchInfo> batchInfos)
+        private async Task<bool> ImportTextures(Window win, AssetWorkspace workspace, List<ImportBatchInfo> batchInfos)
         {
             StringBuilder errorBuilder = new StringBuilder();
 
@@ -75,11 +75,6 @@ namespace TexturePlugin
                     continue;
                 }
 
-                AssetTypeValueField m_StreamData = baseField["m_StreamData"];
-                m_StreamData["offset"].AsInt = 0;
-                m_StreamData["size"].AsInt = 0;
-                m_StreamData["path"].AsString = "";
-
                 if (!baseField["m_MipCount"].IsDummy)
                     baseField["m_MipCount"].AsInt = mips;
 
@@ -90,10 +85,7 @@ namespace TexturePlugin
                 baseField["m_Width"].AsInt = width;
                 baseField["m_Height"].AsInt = height;
 
-                AssetTypeValueField image_data = baseField["image data"];
-                image_data.Value.ValueType = AssetValueType.ByteArray;
-                image_data.TemplateField.ValueType = AssetValueType.ByteArray;
-                image_data.AsByteArray = encImageBytes;
+                TextureHelper.WriteTextureData(workspace, cont.FileInstance, baseField, encImageBytes);
             }
 
             if (errorBuilder.Length > 0)
@@ -133,7 +125,7 @@ namespace TexturePlugin
                 return false;
             }
 
-            bool success = await ImportTextures(win, batchInfos);
+            bool success = await ImportTextures(win, workspace, batchInfos);
             if (success)
             {
                 foreach (AssetContainer cont in selection)

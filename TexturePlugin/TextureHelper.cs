@@ -66,8 +66,17 @@ namespace TexturePlugin
             }
         }
 
-        public static byte[] GetRawTextureBytes(TextureFile texFile, AssetsFileInstance inst)
+        public static byte[] GetRawTextureBytes(TextureFile texFile, AssetsFileInstance inst, AssetWorkspace workspace = null)
         {
+            if (texFile.m_StreamData.size != 0 && texFile.m_StreamData.path != string.Empty
+                && workspace != null
+                && workspace.TryReadStreamingData(inst, texFile.m_StreamData.path, texFile.m_StreamData.offset, texFile.m_StreamData.size, out byte[] pendingData)
+                && pendingData != null)
+            {
+                texFile.pictureData = pendingData;
+                return pendingData;
+            }
+
             string rootPath = Path.GetDirectoryName(inst.path);
             if (texFile.m_StreamData.size != 0 && texFile.m_StreamData.path != string.Empty)
             {
@@ -93,6 +102,63 @@ namespace TexturePlugin
                 }
             }
             return texFile.pictureData;
+        }
+
+        public static void SetImageData(AssetTypeValueField baseField, byte[] data)
+        {
+            AssetTypeValueField image_data = baseField["image data"];
+            image_data.Value.ValueType = AssetValueType.ByteArray;
+            image_data.TemplateField.ValueType = AssetValueType.ByteArray;
+            image_data.AsByteArray = data ?? Array.Empty<byte>();
+        }
+
+        public static bool TryGetStreamData(AssetTypeValueField baseField, out string path, out ulong offset, out uint size)
+        {
+            path = "";
+            offset = 0;
+            size = 0;
+            AssetTypeValueField m_StreamData = baseField["m_StreamData"];
+            if (m_StreamData.IsDummy)
+                return false;
+
+            if (!m_StreamData["path"].IsDummy)
+                path = m_StreamData["path"].AsString ?? "";
+            if (!m_StreamData["offset"].IsDummy)
+                offset = m_StreamData["offset"].AsULong;
+            if (!m_StreamData["size"].IsDummy)
+                size = m_StreamData["size"].AsUInt;
+            return !string.IsNullOrEmpty(path) && size != 0;
+        }
+
+        public static void SetStreamData(AssetTypeValueField baseField, ulong offset, uint size, string path)
+        {
+            AssetTypeValueField m_StreamData = baseField["m_StreamData"];
+            if (m_StreamData.IsDummy)
+                return;
+            m_StreamData["offset"].AsULong = offset;
+            m_StreamData["size"].AsUInt = size;
+            m_StreamData["path"].AsString = path ?? "";
+        }
+
+        /// <summary>
+        /// Write encoded pixels back to a sibling .resS when this is a standalone
+        /// serialized file that already streamed. Otherwise inline into image data
+        /// (bundle / missing resS / originally inlined textures).
+        /// </summary>
+        public static void WriteTextureData(AssetWorkspace workspace, AssetsFileInstance fileInst, AssetTypeValueField baseField, byte[] encImageBytes)
+        {
+            TryGetStreamData(baseField, out string streamPath, out ulong streamOffset, out uint streamSize);
+
+            if (workspace != null
+                && workspace.TryQueueStreamingWrite(fileInst, streamPath, streamOffset, streamSize, encImageBytes, out ulong newOffset, out uint newSize))
+            {
+                SetStreamData(baseField, newOffset, newSize, streamPath);
+                SetImageData(baseField, Array.Empty<byte>());
+                return;
+            }
+
+            SetStreamData(baseField, 0, 0, "");
+            SetImageData(baseField, encImageBytes);
         }
 
         public static byte[] GetPlatformBlob(AssetTypeValueField texBaseField)
